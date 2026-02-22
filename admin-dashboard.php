@@ -628,19 +628,25 @@ tbody tr:hover{background:var(--surface2);}
 </div><!-- /main -->
 
 <!-- ── Add Member Modal ────────────────────────────────────── -->
-<div class="modal fade" id="addMemberModal" tabindex="-1">
+<form class="modal fade" id="addMemberModal" tabindex="-1">
   <div class="modal-dialog"><div class="modal-content">
     <div class="modal-header">
       <h5 class="modal-title">Add New Member</h5>
       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
     </div>
     <div class="modal-body"><div class="row g-3">
-      <div class="col-6"><label class="form-label">Full Name</label><input type="text" class="form-control" placeholder="John Doe"></div>
-      <div class="col-6"><label class="form-label">Roll Number</label><input type="text" class="form-control" placeholder="1, 2, 3..."></div>
-      <div class="col-12"><label class="form-label">Email</label><input type="email" class="form-control" placeholder="john@email.com"></div>
-      <div class="col-6"><label class="form-label">Phone</label><input type="text" class="form-control" placeholder="+92 300..."></div>
-      <div class="col-6"><label class="form-label">Plan</label><select class="form-select"><option>Trial</option><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></div>
-      <div class="col-6"><label class="form-label">Fee Day of Month</label><input type="number" class="form-control" placeholder="e.g. 21" min="1" max="31"></div>
+      <div class="col-6"><label class="form-label">Full Name</label>
+      <input type="text" class="form-control" placeholder="John Doe"></div>
+      <div class="col-6"><label class="form-label">Roll Number</label>
+      <input type="text" class="form-control" placeholder="1, 2, 3..."></div>
+      <div class="col-12"><label class="form-label">Email</label>
+      <input type="email" class="form-control" placeholder="john@email.com"></div>
+      <div class="col-6"><label class="form-label">Phone</label>
+      <input type="text" class="form-control" placeholder="+92 300..."></div>
+      <div class="col-6"><label class="form-label">Plan</label>
+      <select class="form-select"><option>Trial</option><option>Monthly</option><option>Quarterly</option><option>Annual</option></select></div>
+      <div class="col-6"><label class="form-label">Amount</label>
+      <input type="number" class="form-control" placeholder="e.g. 21" min="1" max="31"></div>
       <div class="col-6"><label class="form-label">Gender</label><select class="form-select"><option>Male</option><option>Female</option><option>Other</option></select></div>
     </div></div>
     <div class="modal-footer">
@@ -648,7 +654,7 @@ tbody tr:hover{background:var(--surface2);}
       <button class="btn-accent" data-bs-dismiss="modal">Add Member</button>
     </div>
   </div></div>
-</div>
+</form>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 <script>
