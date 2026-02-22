@@ -124,8 +124,8 @@
     .brand-panel {
       position: relative; z-index: 1;
       display: flex; flex-direction: column; justify-content: center; align-items: flex-start;
-      padding: 60px 50px;
-      min-height: 100vh;
+      padding:  50px;
+      min-height: 110vh;
     }
 
     .brand-tag {
@@ -146,7 +146,7 @@
       font-size: clamp(72px, 8vw, 110px);
       line-height: 0.88;
       color: #fff;
-      letter-spacing: 2px;
+      letter-spacing: 2px;  
     }
     .brand-name span {
       color: var(--gold);
@@ -409,11 +409,11 @@
   <div class="row g-0" style="min-height:100vh;">
 
     <!-- ── Left Brand Panel ── -->
-    <div class="col-xl-6 col-lg-4 col-md-3 d-none d-xl-flex d-lg-flex d-md-flex">
+    <div class="col-xl-6 col-lg-4 col-md-3 d-none d-xl-flex d-lg-flex d-md-flex align-items-center">
       <div class="brand-panel">
         <!-- <div class="brand-tag">Est. 2020 &nbsp;·&nbsp; Elite Fitness</div> -->
 
-        <div class="brand-name">
+        <div class="brand-name m-0 p-0">
           Pump<span>House</span>
         </div>
         <div class="brand-sub">Gym Management System</div>
