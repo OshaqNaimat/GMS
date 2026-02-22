@@ -409,9 +409,9 @@
   <div class="row g-0" style="min-height:100vh;">
 
     <!-- ── Left Brand Panel ── -->
-    <div class="col-lg-6 d-flex">
+    <div class="col-xl-6 col-lg-4 col-md-3 d-none d-xl-flex d-lg-flex d-md-flex">
       <div class="brand-panel">
-        <div class="brand-tag">Est. 2020 &nbsp;·&nbsp; Elite Fitness</div>
+        <!-- <div class="brand-tag">Est. 2020 &nbsp;·&nbsp; Elite Fitness</div> -->
 
         <div class="brand-name">
           Pump<span>House</span>
@@ -425,7 +425,7 @@
           scheduling sessions, and running your gym like a machine.
         </p>
 
-        <div class="stat-row">
+        <!-- <div class="stat-row">
           <div class="stat">
             <div class="stat-num">500+</div>
             <div class="stat-label">Members</div>
@@ -438,7 +438,7 @@
             <div class="stat-num">30+</div>
             <div class="stat-label">Programs</div>
           </div>
-        </div>
+        </div> -->
 
         <!-- decorative barbell -->
         <div class="barbell">
@@ -452,7 +452,7 @@
     </div>
 
     <!-- ── Right Auth Panel ── -->
-    <div class="col-lg-6">
+    <div class="col-xl-6 col-lg-8 col-md-9 col-12">
       <div class="auth-panel">
         <div class="auth-card">
 
