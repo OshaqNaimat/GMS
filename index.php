@@ -168,6 +168,58 @@
   .tab-nav{display:flex;gap:4px;background:var(--surface2);padding:4px;border-radius:9px;margin-bottom:24px;}
   .tab-btn{flex:1;text-align:center;padding:8px 12px;border-radius:7px;cursor:pointer;font-size:.82rem;font-weight:500;color:var(--muted);transition:all .2s;border:none;background:transparent;font-family:'DM Sans',sans-serif;}
   .tab-btn.active{background:var(--surface);color:var(--text);}
+ .pump-house {
+            font-size: 5rem;            /* large to show details, scale as you like */
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            background: linear-gradient(145deg, #ffd966, #fbbf24, #ffe68f, #fbbf24);
+            background-size: 300% 300%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+
+            /* core animation: gradient shift + glow pulse */
+            animation: gradientFlow 3.5s ease infinite, softGlow 2.2s infinite alternate;
+
+            /* optional slight transform for smoothness */
+            transform: translateZ(0);
+            text-rendering: optimizeLegibility;
+        }
+
+        /* moves the gradient across the text – gives fiery / metallic feel */
+        @keyframes gradientFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* glow that changes intensity and size – pure yellow/black theme */
+        @keyframes softGlow {
+            from {
+                text-shadow: 
+                    0 0 5px #fbbf24,
+                    0 0 12px #fbbf24,
+                    0 0 20px #ffd96666;
+            }
+            to {
+                text-shadow: 
+                    0 0 10px #ffdf80,
+                    0 0 25px #ffd966,
+                    0 0 35px #fbbf24,
+                    0 0 50px #fbbf2466;
+            }
+        }
+        body.light-mode {
+  --bg: #f5f6fa;
+  --surface: #ffffff;
+  --surface2: #f1f3f6;
+  --border: #e2e5ea;
+  --accent: #111111;
+  --accent2: #ff4757;
+  --text: #111111;
+  --muted: #6b7280;
+
+}
   @keyframes fadeIn{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
   .content>*{animation:fadeIn .4s ease both;}
   .content>*:nth-child(1){animation-delay:.05s;} .content>*:nth-child(2){animation-delay:.1s;} .content>*:nth-child(3){animation-delay:.15s;} .content>*:nth-child(4){animation-delay:.2s;}
@@ -179,8 +231,8 @@
 <!-- ── Sidebar ─────────────────────────────────────────────── -->
 <div class="sidebar" id="sidebar">
   <div class="sidebar-logo">
-    <h1>Pump House</h1>
-    <span>Gym Management</span>
+ <h1 class="pump-house">PUMP HOUSE</h1>
+     <span>Gym Management</span>
   </div>
   <div class="nav-section">Main</div>
   <a class="nav-item active" onclick="showPage('dashboard')"><i class="fa fa-gauge-high"></i> Dashboard</a>
@@ -209,8 +261,9 @@
     <div class="topbar-search"><i class="fa fa-magnifying-glass"></i><input type="text" placeholder="Search members, classes..."></div>
     <div class="topbar-actions">
       <div class="icon-btn"><i class="fa fa-bell"></i><div class="badge-dot"></div></div>
-      <div class="icon-btn"><i class="fa fa-moon"></i></div>
-    </div>
+<div class="icon-btn" id="themeToggle">
+  <i class="fa fa-moon"></i>
+</div>    </div>
   </div>
 
   <!-- DASHBOARD -->
@@ -554,6 +607,29 @@ function renderChart(id, data, labels, color) {
     return `<div class="bar-wrap"><div class="bar" style="height:${h}px;background:${isCurrent?color:'var(--surface2)'};"></div><div class="bar-label">${labels[i]}</div></div>`;
   }).join('');
 }
+const themeToggle = document.getElementById("themeToggle");
+const themeIcon = themeToggle.querySelector("i");
+
+// Load saved theme
+if (localStorage.getItem("theme") === "light") {
+  document.body.classList.add("light-mode");
+  themeIcon.classList.remove("fa-moon");
+  themeIcon.classList.add("fa-sun");
+}
+
+themeToggle.addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+
+  if (document.body.classList.contains("light-mode")) {
+    localStorage.setItem("theme", "light");
+    themeIcon.classList.remove("fa-moon");
+    themeIcon.classList.add("fa-sun");
+  } else {
+    localStorage.setItem("theme", "dark");
+    themeIcon.classList.remove("fa-sun");
+    themeIcon.classList.add("fa-moon");
+  }
+});
 
 // ── Init ──────────────────────────────────────────────────────────────────────
 renderChart('revenue-chart', revenueData, months, 'var(--accent)');
