@@ -358,8 +358,8 @@ tbody tr:hover{background:var(--surface2);}
   ══════════════════════════════════════════ -->
   <div id="page-dashboard" class="content">
     <div class="row g-3 mb-4">
-      <div class="col-sm-6 col-xl-4"><div class="stat-card c1"><div class="stat-icon"><i class="fa fa-users"></i></div><div class="stat-label">Active Members</div><div class="stat-value">1,284</div><div class="stat-sub"><span class="up">↑ 12%</span> vs last month</div></div></div>
-      <div class="col-sm-6 col-xl-4"><div class="stat-card c2"><div class="stat-icon"><i class="fa fa-dollar-sign"></i></div><div class="stat-label">Monthly Revenue</div><div class="stat-value">$48,290</div><div class="stat-sub"><span class="up">↑ 8.3%</span> vs last month</div></div></div>
+      <div class="col-sm-6 col-xl-4"><div class="stat-card c1"><div class="stat-icon"><i class="fa fa-users"></i></div><div class="stat-label">Active Members</div><div class="stat-value">321</div><div class="stat-sub"><span class="up">↑ 12%</span> vs last month</div></div></div>
+      <div class="col-sm-6 col-xl-4"><div class="stat-card c2"><div class="stat-icon"><i class="fa fa-dollar-sign"></i></div><div class="stat-label">Monthly Revenue</div><div class="stat-value">$1234</div><div class="stat-sub"><span class="up">↑ 8.3%</span> vs last month</div></div></div>
       <div class="col-sm-6 col-xl-4"><div class="stat-card c3"><div class="stat-icon"><i class="fa fa-calendar-xmark"></i></div><div class="stat-label">Expired Plans</div><div class="stat-value">67</div><div class="stat-sub"><span class="dn">↑ 4</span> this week</div></div></div>
     </div>
 
@@ -375,7 +375,7 @@ tbody tr:hover{background:var(--surface2);}
           </div>
           <div class="chart-bars" id="revenue-chart"></div>
           <div style="display:flex;gap:16px;margin-top:8px;padding-top:8px;border-top:1px solid var(--border);">
-            <div class="mini-metric"><div class="val" style="color:var(--accent);">$48,290</div><div class="lbl">This Month</div></div>
+            <div class="mini-metric"><div class="val" style="color:var(--accent);">$1234</div><div class="lbl">This Month</div></div>
             <div class="mini-metric"><div class="val">$44,611</div><div class="lbl">Last Month</div></div>
             <div class="mini-metric"><div class="val" style="color:#4ade80;">+8.3%</div><div class="lbl">Growth</div></div>
           </div>
