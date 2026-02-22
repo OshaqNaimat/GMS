@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pump House – Gym Management System</title>
+  <?php include "./Bootstrap.php"?>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
@@ -511,18 +511,18 @@
           <!-- ── SIGNUP ── -->
           <div class="form-section" id="signup">
             <div class="row g-0">
-              <div class="col-6 pe-2">
+              <div class="col-12 pe-2">
                 <div class="form-group">
-                  <label class="form-label">First Name</label>
+                  <label class="form-label">Full Name</label>
                   <input type="text" class="form-control" placeholder="John"/>
                 </div>
               </div>
-              <div class="col-6 ps-2">
+              <!-- <div class="col-6 ps-2">
                 <div class="form-group">
                   <label class="form-label">Last Name</label>
                   <input type="text" class="form-control" placeholder="Doe"/>
                 </div>
-              </div>
+              </div> -->
             </div>
 
             <div class="form-group">
@@ -562,20 +562,20 @@
               </div>
             </div>
 
-            <div class="form-group">
+            <!-- <div class="form-group">
               <label class="form-label">Confirm Password</label>
               <div class="input-icon-wrap">
                 <span class="icon">🔒</span>
                 <input type="password" class="form-control" placeholder="Repeat password"/>
               </div>
-            </div>
+            </div> -->
 
-            <div class="form-check mt-2">
+            <!-- <div class="form-check mt-2">
               <input class="form-check-input" type="checkbox" id="terms"/>
               <label class="form-check-label" for="terms">
                 I agree to the <a href="#" class="form-link" style="color:var(--gold);">Terms &amp; Conditions</a>
               </label>
-            </div>
+            </div> -->
 
             <button class="btn-pump">Create Account</button>
 
