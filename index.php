@@ -69,6 +69,10 @@
 
   /* ── Sidebar ──────────────────────────────────────── */
   .sidebar { position:fixed;left:0;top:0;bottom:0;width:var(--sidebar-w);background:var(--surface);border-right:1px solid var(--border);display:flex;flex-direction:column;z-index:100;transition:transform .3s; }
+  body.light-mode .nav-item.active {
+  background: var(--accent);
+  color: #ffffff;
+}
   .sidebar-logo { padding:28px 24px 20px;border-bottom:1px solid var(--border); }
   .sidebar-logo h1 { font-family:'Bebas Neue',sans-serif;font-size:2rem;letter-spacing:2px;color:var(--accent);line-height:1; }
   .sidebar-logo span { color:var(--muted);font-size:.7rem;letter-spacing:3px;text-transform:uppercase;display:block;margin-top:2px; }
